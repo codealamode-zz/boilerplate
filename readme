@@ -10,3 +10,20 @@ Includes support for
 Requires (for building)
 -Node
 -NPM
+
+
+Just clone the repo and run ./init.sh
+This will remove the git files (since you are starting a new project) 
+It also removes the "init.sh" for safety reasons
+
+Setup a vhost pointing to the public folder and you are good to go!
+
+
+To build for production (or just to test how quick things will download) set the $dev variable to false at the top of index.php.
+Then, in terminal run "gulp".
+
+This will compile all your js/less/img files into the build directory - compressing everything
+
+I WILL make this readme prettier later...
+
+Thanks for trying!
