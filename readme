@@ -1,0 +1,12 @@
+This is a boilerplate for starting projects!
+
+Includes support for
+-Jquery (Javascript framework)
+-Less (CSS pre-compiler)
+-Modernizr (capability detection)
+-Mustache (templating language)
+
+
+Requires (for building)
+-Node
+-NPM
