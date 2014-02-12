@@ -7,9 +7,9 @@ var minifyCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
 
 var paths = {
-	scripts: ['dev/js/jquery.js', 'dev/js/modernizr.js', 'dev/js/mustache.js', 'dev/js/app.js'],
-	styles: ['dev/css/reset.less','dev/css/functions.less','dev/css/config.less', 'dev/css/typography.less', 'dev/css/app.less'],
-	images: ['dev/img/**/*']
+	scripts: ['public/dev/js/jquery.js', 'public/dev/js/modernizr.js', 'public/dev/js/mustache.js', 'public/dev/js/app.js'],
+	styles: ['public/dev/css/reset.less','public/dev/css/functions.less','public/dev/css/config.less', 'public/dev/css/typography.less', 'public/dev/css/app.less'],
+	images: ['public/dev/img/**/*']
 };
 
 gulp.task('js', function(){
@@ -20,7 +20,7 @@ gulp.task('js', function(){
     	//compress: false
     }))
     .pipe(concat('all.min.js'))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('public/build/js'));
 
 });
 
@@ -30,7 +30,7 @@ gulp.task('css', function(){
 	.pipe(less())
 	.pipe(minifyCSS())
 	.pipe(concat('all.min.css'))
-	.pipe(gulp.dest('build/css'))
+	.pipe(gulp.dest('public/build/css'))
 
 });
 
@@ -38,7 +38,7 @@ gulp.task('img', function() {
  return gulp.src(paths.images)
     // Pass in options to the task
     .pipe(imagemin({optimizationLevel: 5}))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('public/build/img'));
 });
 
 
